@@ -13,21 +13,21 @@ export const contactSlice = createSlice({
       filter: '',
     },
   },
-  reducers: { 
+  reducers: {
     addContact(state, action) {
       state.contacts.items.push(action.payload);
     },
     delContact(state, action) {
       const index = state.contacts.items.findIndex(
-      contacts => contacts.id === action.payload
+        contacts => contacts.id === action.payload
       );
       state.contacts.items.splice(index, 1);
     },
     setFilter(state, action) {
       state.contacts.filter = action.payload;
     },
-   },
+  },
 });
 
-export default contactSlice.reducer
-export const { addContact, delContact, setFilter } = contactSlice.actions
+export default contactSlice.reducer;
+export const { addContact, delContact, setFilter } = contactSlice.actions;
